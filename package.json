@@ -1,0 +1,44 @@
+{
+	"name": "vscode-caddy",
+	"displayName": "caddyfile",
+	"description": "Syntax highlighter for Caddyfile",
+	"version": "0.4.1",
+	"publisher": "xmonader",
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"repository": {
+		"type": "GitHub",
+		"url": "https://github.com/xmonader/caddy-vscode"
+	},
+	"categories": [
+		"Languages"
+	],
+	"activationEvents": [
+		"onLanguage:caddyfile"
+	  ],
+    "main": "./out/src/extension",
+	"contributes": {
+		"languages": [
+			{
+				"id": "caddyfile",
+				"aliases": [
+					"caddyfile",
+					"Caddyfile"
+				],
+				"extensions": [
+					".Caddyfile",
+					".caddyfile"
+				],
+				"configuration": "./caddy.configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "caddyfile",
+				"scopeName": "source.caddyfile",
+				"path": "./syntaxes/caddyfile.tmLanguage"
+			}
+		]
+	}
+}
